@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "img": "img/Product photo.png",
+        "categorie": "clothing",
+        "name": "Everyday cotton T-shirt",
+        "price": 200
+    },
+    {
+        "id": 2,
+        "img": "img/Product photo.png",
+        "categorie": "clothing",
+        "name": "Everyday cotton T-shirt",
+        "price": 200
+    },
+    {
+        "id": 3,
+        "img": "img/Product photo.png",
+        "categorie": "clothing",
+        "name": "Everyday cotton T-shirt",
+        "price": 200
+    },
+    {
+        "id": 4,
+        "img": "img/Product photo.png",
+        "categorie": "clothing",
+        "name": "Everyday cotton T-shirt",
+        "price": 200
+    },
+    {
+        "id": 5,
+        "img": "img/Product photo.png",
+        "categorie": "clothing",
+        "name": "Everyday cotton T-shirt",
+        "price": 200
+    },
+    {
+        "id": 6,
+        "img": "img/Product photo.png",
+        "categorie": "clothing",
+        "name": "Everyday cotton T-shirt",
+        "price": 200
+    },
+    {
+        "id": 7,
+        "img": "img/Product photo.png",
+        "categorie": "clothing",
+        "name": "Everyday cotton T-shirt",
+        "price": 200
+    },
+    {
+        "id": 8,
+        "img": "img/Product photo.png",
+        "categorie": "clothing",
+        "name": "Everyday cotton T-shirt",
+        "price": 200
+    }
+]
