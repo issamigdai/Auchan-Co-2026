@@ -8,51 +8,86 @@
     },
     {
         "id": 2,
-        "img": "img/Product photo.png",
+        "img": "img/Product photo 2.png",
         "categorie": "clothing",
-        "name": "Everyday cotton T-shirt",
-        "price": 200
+        "name": "Slim fit denim jeans",
+        "price": 350
     },
     {
         "id": 3,
-        "img": "img/Product photo.png",
+        "img": "img/Product photo 3.png",
         "categorie": "clothing",
-        "name": "Everyday cotton T-shirt",
-        "price": 200
+        "name": "Oversized hoodie",
+        "price": 420
     },
     {
         "id": 4,
-        "img": "img/Product photo.png",
+        "img": "img/Product photo 4.png",
         "categorie": "clothing",
-        "name": "Everyday cotton T-shirt",
-        "price": 200
+        "name": "Lightweight summer dress",
+        "price": 380
     },
     {
         "id": 5,
-        "img": "img/Product photo.png",
-        "categorie": "clothing",
-        "name": "Everyday cotton T-shirt",
-        "price": 200
+        "img": "img/Product photo 5.png",
+        "categorie": "shoes",
+        "name": "White leather sneakers",
+        "price": 650
     },
     {
         "id": 6,
-        "img": "img/Product photo.png",
-        "categorie": "clothing",
-        "name": "Everyday cotton T-shirt",
-        "price": 200
+        "img": "img/Product photo 6.png",
+        "categorie": "shoes",
+        "name": "Running shoes Air Flex",
+        "price": 790
     },
     {
         "id": 7,
-        "img": "img/Product photo.png",
-        "categorie": "clothing",
-        "name": "Everyday cotton T-shirt",
-        "price": 200
+        "img": "img/Product photo 7.png",
+        "categorie": "accessories",
+        "name": "Canvas backpack",
+        "price": 250
     },
     {
         "id": 8,
-        "img": "img/Product photo.png",
-        "categorie": "clothing",
-        "name": "Everyday cotton T-shirt",
-        "price": 200
+        "img": "img/Product photo 8.png",
+        "categorie": "accessories",
+        "name": "Classic leather belt",
+        "price": 150
+    },
+    {
+        "id": 9,
+        "img": "img/Product photo 9.png",
+        "categorie": "accessories",
+        "name": "Polarized sunglasses",
+        "price": 300
+    },
+    {
+        "id": 10,
+        "img": "img/Product photo 10.png",
+        "categorie": "electronics",
+        "name": "Wireless Bluetooth headphones",
+        "price": 550
+    },
+    {
+        "id": 11,
+        "img": "img/Product photo 11.png",
+        "categorie": "electronics",
+        "name": "Smart fitness watch",
+        "price": 899
+    },
+    {
+        "id": 12,
+        "img": "img/Product photo 12.png",
+        "categorie": "home",
+        "name": "Ceramic coffee mug set",
+        "price": 120
+    },
+    {
+        "id": 13,
+        "img": "img/Product photo 13.png",
+        "categorie": "home",
+        "name": "Soft cotton bed sheets",
+        "price": 480
     }
 ]

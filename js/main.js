@@ -1,10 +1,35 @@
 import { getProductData } from "./api.js";
-let Products = []
+
+let Products = [];
 Products = await getProductData();
-export function displayProducts() {
+
+function search() {
+    const searched = [];
+    const searchInput = document.getElementById('searchBar').value.toLowerCase().trim();
+    for (let i = 0; i < Products.length; i++) {
+        if (Products[i].name.toLowerCase().includes(searchInput)) {
+            searched.push(Products[i]);
+        }
+    }
+    return searched;
+}
+
+let currentPage = 1
+function pagination(list) {
+    const select = document.getElementById('productPerPage');
+    let productsPage = Number(select.value)
+    let pages = Math.ceil(list.length / productsPage)
+    if (currentPage > pages) currentPage = pages
+    let start = (currentPage - 1) * productsPage
+    let end = currentPage * productsPage
+    const pagination_items = list.slice(start, end)
+    return { pagination_items, pages, start }
+}
+
+function displayProducts(Products) {
     let cataloge = document.getElementById("catalogue");
     cataloge.innerHTML = Products.map(Product => {
-        return `<div class="flex flex-col w-[318px]  bg-[#FFFFFF] shadow rounded-md transition">
+        return `<div class="flex flex-col w-[318px]  bg-[#FFFFFF] shadow rounded-md transition" draggable="true">
                         <div>
                             <img src="${Product.img}" alt="${Product.name}" class="rounded-md">
                         </div>
@@ -43,7 +68,11 @@ export function displayProducts() {
                         </div>
                     </div>
                     `
-    })
-        .join("");
+    }).join('');
 }
-displayProducts();
+
+document.getElementById('searchBar').addEventListener('input', () => {
+    displayProducts(search());
+});
+
+displayProducts(Products);
