@@ -21,7 +21,7 @@
                         stroke-linecap="round" stroke="#0F172A" />
                 </svg>
             </button>
-            <a href="shoppingcart.html" aria-label="Panier"
+            <a href="shoppingcart.html" id="cartZone" aria-label="Panier"
                 class="inline-block rounded-lg bg-[#F8FAFC] p-1 transition-transform duration-200 hover:-translate-y-1">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path
@@ -34,8 +34,6 @@
             class="order-3 h-10 w-full rounded-md border border-gray-300 px-4 md:order-2 md:w-auto md:flex-1 lg:mx-8">
         <div
             class="order-4 flex w-full items-center justify-around border-t border-gray-100 pt-3 text-sm sm:text-base md:justify-center md:gap-8 lg:order-3 lg:w-auto lg:justify-start lg:gap-6 lg:border-0 lg:pt-0">
-            <a href="#"
-                class="inline-block transition-transform duration-200 hover:-translate-y-1 hover:text-red-800">Categorie</a>
             <a href="index.html"
                 class="inline-block transition-transform duration-200 hover:-translate-y-1 hover:text-red-800">Catalogue</a>
             <a href="contact.html"
@@ -44,7 +42,7 @@
                 class="inline-block rounded-lg border border-gray-300 p-1 transition-transform duration-200 hover:-translate-y-1">Admin</a>
         </div>
     </nav>
-    <main class="flex flex-col bg-[#F8FAFC] p-12">
+    <main class="flex flex-col bg-[#F8FAFC] p-2 sm:p-4 md:p-6 lg:p-12">
         <div class="flex flex-col gap-8">
             <small class="font-semibold font-sans">Catalogue</small>
             <div
@@ -92,31 +90,23 @@
                         <small class="text-sm"><span id="totalCount">24</span> curated products</small>
                     </div>
                 </div>
-                <ul class="flex flex-row flex-wrap gap-4 list-none">
-                    <li
-                        class="text-[#64748B] border border-[#64748B] rounded-xl px-2 py-1 hover:bg-[#DC2626] hover:text-white hover:border-none cursor-pointer">
-                        All</li>
-                    <li
-                        class="text-[#64748B] border border-[#64748B] rounded-xl px-2 py-1 hover:bg-[#DC2626] hover:text-white hover:border-none cursor-pointer">
-                        Clothing </li>
-                    <li
-                        class="text-[#64748B] border border-[#64748B] rounded-xl px-2 py-1 hover:bg-[#DC2626] hover:text-white hover:border-none cursor-pointer">
-                        Electronics</li>
-                    <li
-                        class="text-[#64748B] border border-[#64748B] rounded-xl px-2 py-1 hover:bg-[#DC2626] hover:text-white hover:border-none cursor-pointer">
-                        Accessories</li>
-                </ul>
+                <select name="filter" id="filter" class="border-0 rounded-md h-8 w-[20vw] shadow">
+                    <option value="All" class="border-0" selected>All</option>
+                    <option value="Clothing" class="border-0">Clothing</option>
+                    <option value="Electronics" class="border-0">Electronics</option>
+                    <option value="Accessories" class="border-0">Accessories</option>
+                </select>
                 <div class="flex flex-row justify-between items-center">
                     <small class="text-sm" id="resultCount">4 of 24 products</small>
                     <div class="flex flex-row p-1 gap-0 border border-grey-400 rounded-md ">
-                        <button class="p-2.5 cursor-pointer rounded-md hover:bg-[#FBE9E7]"><svg width="18" height="18"
-                                viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <button id="gridBtn" class="p-2.5 cursor-pointer rounded-md hover:bg-[#FBE9E7]"><svg width="18"
+                                height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3 2.25H6.75C7.16421 2.25 7.5 2.58579 7.5 3V6.75C7.5 7.16421 7.16421 7.5 6.75 7.5H3C2.58579 7.5 2.25 7.16421 2.25 6.75V3C2.25 2.58579 2.58579 2.25 3 2.25ZM11.25 2.25H15C15.4142 2.25 15.75 2.58579 15.75 3V6.75C15.75 7.16421 15.4142 7.5 15 7.5H11.25C10.8358 7.5 10.5 7.16421 10.5 6.75V3C10.5 2.58579 10.8358 2.25 11.25 2.25ZM11.25 10.5H15C15.4142 10.5 15.75 10.8358 15.75 11.25V15C15.75 15.4142 15.4142 15.75 15 15.75H11.25C10.8358 15.75 10.5 15.4142 10.5 15V11.25C10.5 10.8358 10.8358 10.5 11.25 10.5ZM3 10.5H6.75C7.16421 10.5 7.5 10.8358 7.5 11.25V15C7.5 15.4142 7.16421 15.75 6.75 15.75H3C2.58579 15.75 2.25 15.4142 2.25 15V11.25C2.25 10.8358 2.58579 10.5 3 10.5Z"
                                     stroke-linecap="round" stroke="#DC2626" />
                             </svg>
                         </button>
-                        <button class="p-2.5 cursor-pointer rounded-md hover:bg-[#FBE9E7]">
+                        <button id="listeBtn" class="p-2.5 cursor-pointer rounded-md hover:bg-[#FBE9E7]">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -127,7 +117,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="grid ggrid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="catalogue">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="catalogue">
 
                 </div>
                 <div class="flex flex-row justify-between items-center">
@@ -140,7 +130,9 @@
                                     fill="#64748B" />
                             </svg>
                         </button>
-                        <div id="pageNumbers" class="flex flex-row gap-2"></div>
+                        <div id="pageNumbers" class="flex flex-row gap-2">
+
+                        </div>
                         <button id="nextBtn"
                             class="w-9 h-9 rounded-md shadow flex items-center justify-center hover:bg-[#DC2626] hover:text-white cursor-pointer">
                             <svg width="4" height="6" viewBox="0 0 4 6" fill="none" xmlns="http://www.w3.org/2000/svg">
